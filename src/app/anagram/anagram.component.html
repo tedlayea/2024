@@ -1,0 +1,21 @@
+<div class="center">
+    <a routerLink="/dashboard"> Dashboard </a>
+</div>
+
+<h1 class="center">Anagram </h1>
+
+<form (submit)="checkforAnagram(text1, text2)">
+    <div>
+        <label for="">Enter the first text</label>
+        <input [(ngModel)]="text1"  name="text1" type="text">
+    </div>
+
+    <div>
+        <label for="">Enter the second text</label>
+        <input [(ngModel)]="text2"  name="text2" type="text">
+    </div>
+    
+      <button > Check for Anagram </button>
+</form>
+
+<h3 class="center" *ngIf="checked == true"> {{anagram_result}}</h3>

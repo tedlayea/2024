@@ -1,0 +1,16 @@
+<div class="center">
+    <a routerLink="/dashboard"> Dashboard </a>
+</div>
+
+<h1 class="center">Febonachi </h1>
+
+<form (submit)="generate(number)">
+    <div>
+        <label for="">Provide a NUmber</label>
+        <input [(ngModel)]="number"  name="number" type="number">
+      </div>
+    
+      <button > Generate </button>
+</form>
+
+<h3 class="center" *ngIf="generated == true">The Febonachi Series result: {{febonachi}}</h3>
